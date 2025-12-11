@@ -1,13 +1,17 @@
 import { Link, Outlet } from "react-router-dom";
 import { FaHome, FaUsers, FaBook, FaMoneyBill, FaUser, FaHistory, FaStar } from "react-icons/fa";
-import { useContext } from "react"; // To check role
-// import useRole from "../../hooks/useRole"; // Custom hook for role
+import useRole from "../hooks/useRole"; // <-- add this
 
 const DashboardLayout = () => {
-    // Mock role for now - replace with actual hook
-    const isAdmin = true;
-    const isModerator = false;
-    // const [role] = useRole();
+    const { isAdmin, isModerator, isRoleLoading } = useRole();
+
+    if (isRoleLoading) {
+        return (
+            <div className="min-h-screen flex items-center justify-center bg-black text-white">
+                <span className="loading loading-spinner loading-lg"></span>
+            </div>
+        );
+    }
 
     return (
         <div className="drawer lg:drawer-open font-sans">

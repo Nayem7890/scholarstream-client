@@ -9,9 +9,17 @@ import Checkout from "../pages/Payment/Checkout";
 import DashboardLayout from "../layouts/DashboardLayout";
 import PaymentSuccess from "../pages/Payment/PaymentSuccess";
 import PrivateRoute from "./PrivateRoute";
+import AdminRoute from "./AdminRoute";
+import ModeratorRoute from "./ModeratorRoute";
 import Profile from "../pages/Dashboard/Profile";
 import MyApplications from "../pages/Dashboard/MyApplications";
 import ManageUsers from "../pages/Dashboard/ManageUsers";
+import AddScholarship from "../pages/Dashboard/AddScholarship";
+import ManageScholarships from "../pages/Dashboard/ManageScholarships";
+import Analytics from "../pages/Dashboard/Analytics";
+import ManageApplications from "../pages/Dashboard/ManageApplications";
+import AllReviews from "../pages/Dashboard/AllReviews";
+import MyReviews from "../pages/Dashboard/MyReviews";
 
 export const router = createBrowserRouter([
   {
@@ -57,23 +65,66 @@ export const router = createBrowserRouter([
         path: "profile",
         element: <Profile></Profile>
       },
-      // Admin
+      // ADMIN
       {
         path: "manage-users",
-        element: <ManageUsers></ManageUsers>
+        element: (
+          <AdminRoute>
+            <ManageUsers></ManageUsers>
+          </AdminRoute>
+        )
+      },
+      {
+        path: "add-scholarship",
+        element: (
+          <AdminRoute>
+            <AddScholarship></AddScholarship>
+          </AdminRoute>
+        )
       },
       {
         path: "manage-scholarships",
-        element: <div>Manage Scholarships</div> // Still placeholder or create later
+        element: (
+          <AdminRoute>
+            <ManageScholarships></ManageScholarships>
+          </AdminRoute>
+        )
       },
-      // Student
+      {
+        path: "analytics",
+        element: (
+          <AdminRoute>
+            <Analytics></Analytics>
+          </AdminRoute>
+        )
+      },
+
+      // MODERATOR
+      {
+        path: "manage-applications",
+        element: (
+          <ModeratorRoute>
+            <ManageApplications></ManageApplications>
+          </ModeratorRoute>
+        )
+      },
+      {
+        path: "all-reviews",
+        element: (
+          <ModeratorRoute>
+            <AllReviews></AllReviews>
+          </ModeratorRoute>
+        )
+      },
+
+      // STUDENT
       {
         path: "my-applications",
         element: <MyApplications></MyApplications>
       },
       {
         path: "my-reviews",
-        element: <div>My Reviews</div>
+        element: <MyReviews></MyReviews>
       }
     ]
   }
