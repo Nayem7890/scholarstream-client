@@ -1,13 +1,15 @@
 import { useQuery, useMutation, useQueryClient } from "@tanstack/react-query";
 import axiosSecure from "../../hooks/useAxiosSecure";
 import toast from "react-hot-toast";
-import { useState } from "react";
+import { useState, useContext } from "react";
 import { FaEye, FaEdit, FaTrash, FaCreditCard, FaStar } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
+import { AuthContext } from "../../context/AuthProvider";
 
 const MyApplications = () => {
     const queryClient = useQueryClient();
     const navigate = useNavigate();
+    const { user } = useContext(AuthContext);
     const [selectedApplication, setSelectedApplication] = useState(null);
     const [reviewData, setReviewData] = useState({ rating: 5, comment: "" });
 
@@ -80,6 +82,9 @@ const MyApplications = () => {
         const reviewPayload = {
             scholarshipId: selectedApplication.scholarshipId,
             universityName: selectedApplication.universityName,
+            userName: user?.displayName || "Anonymous",
+            userEmail: user?.email,
+            userImage: user?.photoURL || "https://via.placeholder.com/48",
             ratingPoint: reviewData.rating,
             reviewComment: reviewData.comment,
             reviewDate: new Date().toISOString(),
