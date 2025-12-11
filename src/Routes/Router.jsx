@@ -20,12 +20,13 @@ import Analytics from "../pages/Dashboard/Analytics";
 import ManageApplications from "../pages/Dashboard/ManageApplications";
 import AllReviews from "../pages/Dashboard/AllReviews";
 import MyReviews from "../pages/Dashboard/MyReviews";
+import NotFound from "../pages/NotFound";
 
 export const router = createBrowserRouter([
   {
     path: "/",
     element: <MainLayout></MainLayout>,
-    errorElement: <div>404 Not Found</div>, // Placeholder
+    errorElement: <NotFound />,
     children: [
       {
         path: "/",
@@ -127,5 +128,10 @@ export const router = createBrowserRouter([
         element: <MyReviews></MyReviews>
       }
     ]
+  },
+  // Catch-all route for 404
+  {
+    path: "*",
+    element: <NotFound />
   }
 ]);
