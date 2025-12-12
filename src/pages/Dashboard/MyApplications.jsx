@@ -22,7 +22,7 @@ const MyApplications = () => {
         },
     });
 
-    // Delete application mutation
+    // Delete application
     const deleteMutation = useMutation({
         mutationFn: async (applicationId) => {
             const res = await axiosSecure.delete(`/applications/${applicationId}`);
@@ -37,7 +37,7 @@ const MyApplications = () => {
         },
     });
 
-    // Add review mutation
+    // Add review 
     const addReviewMutation = useMutation({
         mutationFn: async (reviewPayload) => {
             const res = await axiosSecure.post("/reviews", reviewPayload);
