@@ -30,7 +30,7 @@ const ManageUsers = () => {
         },
     });
 
-    // Update user role mutation
+    // Update user role
     const updateRoleMutation = useMutation({
         mutationFn: async ({ userId, role }) => {
             const res = await axiosSecure.patch(`/users/${userId}/role`, { role });
