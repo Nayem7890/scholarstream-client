@@ -6,7 +6,7 @@ import { FaTrash, FaStar } from "react-icons/fa";
 const AllReviews = () => {
     const queryClient = useQueryClient();
 
-    // Fetch all reviews (Moderator endpoint)
+    // Fetch all reviews (Moderator)
     const { data: reviews = [], isLoading, error } = useQuery({
         queryKey: ["allReviews"],
         queryFn: async () => {
