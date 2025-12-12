@@ -40,7 +40,7 @@ const AllScholarships = () => {
         return () => clearTimeout(timer);
     }, [searchInput]);
 
-    // Fetch all scholarships for suggestions (limited to 10)
+    // Fetch all scholarships for suggestions
     const { data: suggestionsData } = useQuery({
         queryKey: ["suggestions", searchInput],
         queryFn: async () => {
