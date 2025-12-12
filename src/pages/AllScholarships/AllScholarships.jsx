@@ -83,7 +83,7 @@ const AllScholarships = () => {
     const total = data?.total || 0;
     const suggestions = suggestionsData?.data || [];
 
-    // Extract unique values for suggestions
+    // Extract unique values
     const uniqueUniversities = [...new Set(suggestions.map(s => s.universityName))].slice(0, 3);
     const uniqueCountries = [...new Set(suggestions.map(s => s.universityCountry))].slice(0, 3);
 
