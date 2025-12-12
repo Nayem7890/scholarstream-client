@@ -74,7 +74,7 @@ const Analytics = () => {
 
     // ----- Chart data -----
 
-    // Bar chart: Top scholarships by applications
+    // Bar chart: Top scholarships
     const topScholarshipsData = (analytics.topScholarships || []).map((item) => ({
         name: item.name?.length > 16 ? item.name.slice(0, 16) + "…" : item.name,
         fullName: item.name,
