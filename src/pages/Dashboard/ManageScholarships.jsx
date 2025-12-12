@@ -33,7 +33,7 @@ const ManageScholarships = () => {
         },
     });
 
-    // Update scholarship mutation
+    // Update scholarship
     const updateMutation = useMutation({
         mutationFn: async ({ id, data }) => {
             const res = await axiosSecure.patch(`/scholarships/${id}`, data);
