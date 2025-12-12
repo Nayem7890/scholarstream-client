@@ -15,7 +15,7 @@ const AllReviews = () => {
         },
     });
 
-    // Delete review mutation
+    // Delete review
     const deleteMutation = useMutation({
         mutationFn: async (reviewId) => {
             const res = await axiosSecure.delete(`/reviews/${reviewId}`);
