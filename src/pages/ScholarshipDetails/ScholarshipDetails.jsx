@@ -1,6 +1,7 @@
 import { useParams, Link } from "react-router-dom";
 import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
+import LoadingSpinner from "../../components/LoadingSpinner";
 
 const ScholarshipDetails = () => {
     const { id } = useParams();
@@ -14,7 +15,7 @@ const ScholarshipDetails = () => {
     });
 
     if (isLoading) {
-        return <div className="min-h-screen flex justify-center items-center bg-black text-[#a3e635]"> <span className="loading loading-spinner loading-lg"></span> </div>
+        return <LoadingSpinner message="Loading scholarship details..." />;
     }
 
     if (isError) {

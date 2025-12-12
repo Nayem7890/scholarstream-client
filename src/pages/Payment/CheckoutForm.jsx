@@ -202,6 +202,58 @@ const CheckoutForm = ({ price, scholarship }) => {
                 )}
             </div>
 
+            {/* Test Card Information */}
+            <div className="bg-gradient-to-br from-[#a3e635]/10 to-lime-500/5 border border-[#a3e635]/30 rounded-2xl p-6">
+                <div className="flex items-start gap-3 mb-4">
+                    <div className="bg-[#a3e635] p-2 rounded-lg">
+                        <svg className="w-5 h-5 text-black" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M13 16h-1v-4h-1m1-4h.01M21 12a9 9 0 11-18 0 9 9 0 0118 0z" />
+                        </svg>
+                    </div>
+                    <div className="flex-1">
+                        <h4 className="text-white font-bold mb-1">Test Mode - Use Test Card</h4>
+                        <p className="text-gray-400 text-sm">Use the following test card for payment testing</p>
+                    </div>
+                </div>
+
+                <div className="grid grid-cols-1 md:grid-cols-2 gap-3">
+                    <div className="bg-black/30 rounded-lg p-3 border border-white/10">
+                        <p className="text-xs text-gray-500 mb-1">Card Number</p>
+                        <div className="flex items-center justify-between">
+                            <p className="text-white font-mono text-sm">4242 4242 4242 4242</p>
+                            <button
+                                type="button"
+                                onClick={() => {
+                                    navigator.clipboard.writeText("4242424242424242");
+                                    toast.success("Card number copied!");
+                                }}
+                                className="text-[#a3e635] hover:text-lime-400 transition-colors"
+                                title="Copy card number"
+                            >
+                                <svg className="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M8 16H6a2 2 0 01-2-2V6a2 2 0 012-2h8a2 2 0 012 2v2m-6 12h8a2 2 0 002-2v-8a2 2 0 00-2-2h-8a2 2 0 00-2 2v8a2 2 0 002 2z" />
+                                </svg>
+                            </button>
+                        </div>
+                    </div>
+
+                    <div className="bg-black/30 rounded-lg p-3 border border-white/10">
+                        <p className="text-xs text-gray-500 mb-1">Expiry Date</p>
+                        <p className="text-white font-mono text-sm">Any future date</p>
+                    </div>
+
+                    <div className="bg-black/30 rounded-lg p-3 border border-white/10">
+                        <p className="text-xs text-gray-500 mb-1">CVC</p>
+                        <p className="text-white font-mono text-sm">Any 3 digits</p>
+                    </div>
+
+                    <div className="bg-black/30 rounded-lg p-3 border border-white/10">
+                        <p className="text-xs text-gray-500 mb-1">ZIP Code</p>
+                        <p className="text-white font-mono text-sm">Any 5 digits</p>
+                    </div>
+                </div>
+            </div>
+
             {/* Name on Card */}
             <div className="form-control">
                 <label className="label">

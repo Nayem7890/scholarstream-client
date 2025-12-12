@@ -13,7 +13,15 @@ const Profile = () => {
                 <div className="card bg-[#111] border border-white/5 rounded-[2rem] p-8 text-center md:col-span-1 h-fit">
                     <div className="avatar justify-center mb-6">
                         <div className="w-32 rounded-full ring ring-[#a3e635] ring-offset-base-100 ring-offset-2">
-                            <img src={user?.photoURL} alt="Profile" />
+                            {user?.photoURL ? (
+                                <img src={user.photoURL} alt="Profile" />
+                            ) : (
+                                <div className="w-32 h-32 rounded-full bg-gradient-to-br from-[#a3e635] to-lime-400 flex items-center justify-center">
+                                    <span className="text-5xl font-bold text-black">
+                                        {user?.displayName?.charAt(0)?.toUpperCase() || user?.email?.charAt(0)?.toUpperCase() || "U"}
+                                    </span>
+                                </div>
+                            )}
                         </div>
                     </div>
                     <h3 className="text-2xl font-bold text-white mb-2">{user?.displayName}</h3>
