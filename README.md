@@ -22,7 +22,7 @@ The ScholarStream client provides:
 ## Live Links
 
 - **Client (Vercel):** https://scholarstream-client.vercel.app/
-- **Server (Vercel API):** https://scholar-stream-server-sooty.vercel.app/
+- **Server (Vercel API):** https://scholarstream-client.vercel.app/
 - **Server (Netlify API):** https://scholar-stream789.netlify.app/
 ---
 
