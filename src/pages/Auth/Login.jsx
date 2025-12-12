@@ -38,7 +38,7 @@ const Login = () => {
         googleSignIn()
             .then(result => {
                 console.log(result.user);
-                // POST user to backend if needed
+                // POST user to backend
                 navigate(from, { replace: true });
             })
             .catch(error => console.error(error));

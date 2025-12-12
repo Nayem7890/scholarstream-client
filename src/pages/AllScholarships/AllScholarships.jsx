@@ -230,7 +230,7 @@ const AllScholarships = () => {
                             </div>
                         </form>
 
-                        {/* Suggestions Dropdown */}
+                        {/* Dropdown */}
                         <AnimatePresence>
                             {showSuggestions && suggestions.length > 0 && (
                                 <motion.div
