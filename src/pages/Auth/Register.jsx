@@ -19,11 +19,7 @@ const Register = () => {
                     .then(() => {
                         // POST user to backend (name, email, role: 'student')
                         /*
-                        const userInfo = {
-                            name: data.name,
-                            email: data.email,
-                            role: 'student'
-                        }
+                    
                         axios.post('/users', userInfo)
                             .then(res => {
                                 if (res.data.insertedId) { ... }
