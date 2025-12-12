@@ -21,9 +21,9 @@ The ScholarStream client provides:
 
 ## Live Links
 
-- **Client (Vercel):** https://scholarstream-client.vercel.app/
-- **Server (Vercel API):** https://scholarstream-client.vercel.app/
-- **Server (Netlify API):** https://scholar-stream789.netlify.app/
+- **Client (Vercel API):** https://scholarstream-client.vercel.app/
+- **Client (Netlify API):** https://scholar-stream789.netlify.app/
+- **Server (Vercel):** https://scholar-stream-server-sooty.vercel.app/
 ---
 
 ## Main Technologies Used
