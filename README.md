@@ -4,7 +4,7 @@ ScholarStream is a Scholarship Management Platform built to connect students wit
 
 > Recommended: Add a clean screenshot of your homepage/dashboard here.  
 > Example:
-> ![ScholarStream Client Screenshot](./assets/scholarstream.png)
+> ![ScholarStream Client Screenshot](./src/assets/scholarstream.png)
 
 ---
 
