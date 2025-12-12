@@ -203,7 +203,7 @@ const AllScholarships = () => {
                                     onFocus={() => searchInput.length >= 2 && setShowSuggestions(true)}
                                 />
 
-                                {/* Loading Indicator */}
+                                {/* Loading*/}
                                 {isSearching && (
                                     <div className="absolute right-20">
                                         <span className="loading loading-spinner loading-sm text-[#a3e635]"></span>
