@@ -5,7 +5,7 @@ import { useQuery } from "@tanstack/react-query";
 import axios from "axios";
 import { useRef, useEffect, useState } from "react";
 
-// Animated Counter Component
+// Animated Counter Component//
 const AnimatedCounter = ({ end, duration = 2, suffix = "" }) => {
     const [count, setCount] = useState(0);
     const ref = useRef(null);
