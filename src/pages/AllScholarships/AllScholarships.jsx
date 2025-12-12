@@ -59,7 +59,7 @@ const AllScholarships = () => {
         enabled: searchInput.length >= 2,
     });
 
-    // Fetch scholarships with search, filter, and pagination
+    // Fetch scholarships with search, filter
     const { data, isLoading, isError, error } = useQuery({
         queryKey: ["scholarships", debouncedSearch, category, page],
         queryFn: async () => {
