@@ -2,9 +2,8 @@
 
 ScholarStream is a Scholarship Management Platform built to connect students with scholarship opportunities. This repository contains the **frontend (React/Vite)** application where students can browse scholarships, apply via Stripe payment, track applications, and write reviews. Admins and Moderators access dedicated dashboards for management and analytics.
 
-> Recommended: Add a clean screenshot of your homepage/dashboard here.  
-> Example:
-> ![ScholarStream Client Screenshot](./src/assets/scholarstream.png)
+
+![ScholarStream Client Screenshot](./src/assets/scholarstream.png)
 
 ---
 
