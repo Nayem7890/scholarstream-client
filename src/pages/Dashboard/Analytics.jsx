@@ -82,7 +82,7 @@ const Analytics = () => {
         applications: item.applications,
     }));
 
-    // Pie chart: User role distribution
+    // Pie chart: User role
     const usersByRole = analytics.usersByRole || {};
     const userRoleData = [
         { name: "Students", value: usersByRole.students || 0 },
